@@ -7,10 +7,10 @@ data:
       rolearn: arn:aws:iam::529088271493:role/eksctl-expense-nodegroup-expense-NodeInstanceRole-SeWcQfLICvfC
       username: system:node:{{EC2PrivateDNSName}}
   mapUsers: | # add user (Krishna, to map the IAM user Krishna into EKS)
-  - groups:
-      - default-trainee
-    userarn: arn:aws:iam::529088271493:user/Krishna
-    username: Krishna
+    - groups:
+        - default-trainee
+      userarn: arn:aws:iam::529088271493:user/Krishna
+      username: Krishna
 kind: ConfigMap
 metadata:
   creationTimestamp: "2025-04-12T03:11:32Z"
