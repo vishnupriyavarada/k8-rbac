@@ -26,3 +26,4 @@ eksctl create iamserviceaccount \
 --region $REGION_CODE \
 --approve
 ```
+the above command will create IAM role with policy ExpenseMysqlSecretRead and integrate with EKS SA
