@@ -18,3 +18,21 @@ aws eks update-kubeconfig --region region-code --name my-cluster
 
 aws eks update-kubeconfig --region us-east-1 --name expense
 ```
+
+
+# RBAC
+
+REGION_CODE=us-east-1
+CLUSTER_NAME=expense
+ACCOUNT_ID=529088271493
+
+### Permissions
+
+* 1. OIDC Provider
+
+```
+eksctl utils associate-iam-oidc-provider \
+    --region $REGION_CODE \
+    --cluster $CLUSTER_NAME \
+    --approve
+```  
